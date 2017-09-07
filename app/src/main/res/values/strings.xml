@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Clojure Quest</string>
+    <string name="answerA">radioButton1</string>
+   <string name="answerB">radioButton2</string>
+    <string name="answerC">radioButton3</string>
+    <string name="answerD">radioButton4</string>
+</resources>
