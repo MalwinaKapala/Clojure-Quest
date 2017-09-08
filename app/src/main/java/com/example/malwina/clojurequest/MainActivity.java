@@ -26,5 +26,9 @@ public class MainActivity extends AppCompatActivity {
         boolean checked = ((RadioButton)view).isChecked();
 
         switch (view.getId()){
+
+            case R.id.radio_button_1:
+                if(checked)
+                    break;
     }
 }}
