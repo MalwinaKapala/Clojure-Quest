@@ -12,58 +12,65 @@
         android:layout_height="wrap_content"
         android:id="@+id/idQuestionTextView"
         android:text="ID: 7 (1/50)"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="@color/darkGray"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        />
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_marginStart="5dp" />
 
     <TextView
-        android:layout_width="100dp"
+        android:layout_width="140dp"
         android:layout_height="25dp"
         android:id="@+id/questionTextView1"
         android:text="aaa"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="@color/white"
         android:background="@color/black"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/idQuestionTextView"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/idQuestionTextView"
+        app:layout_constraintRight_toLeftOf="@+id/guideline1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintHorizontal_chainStyle="spread" />
     <ImageView
         android:id="@+id/image1"
         android:visibility="visible"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/arrow_right"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@id/idQuestionTextView"
-        app:layout_constraintLeft_toRightOf="@id/questionTextView1"
+        app:layout_constraintTop_toBottomOf="@+id/idQuestionTextView"
         android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        tools:ignore="ContentDescription" />
 
-         />
     <TextView
-        android:layout_width="100dp"
+        android:layout_width="140dp"
         android:layout_height="25dp"
         android:id="@+id/questionTextView2"
         android:text="bbb"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="@color/white"
         android:background="@color/black"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/idQuestionTextView"
-        app:layout_constraintLeft_toRightOf="@+id/image1" />
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/idQuestionTextView"
+        app:layout_constraintLeft_toRightOf="@+id/guideline2"
+        />
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/questionTextView1">
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView1"
+        app:layout_constraintLeft_toLeftOf="@id/questionTextView1">
 
         <RadioButton
             android:id="@+id/radio_button_1"
@@ -92,25 +99,40 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/answerButton1"
-        android:layout_width="174dp"
-        android:layout_height="46dp"
+        android:id="@+id/answerButton"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
         android:text="ANSWEAR"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintRight_toLeftOf="@+id/guideline1"
         />
     <Button
-        android:id="@+id/answerButton2"
-        android:layout_width="170dp"
+        android:id="@+id/nextButton"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:text="NEXT"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"
-        app:layout_constraintLeft_toRightOf="@id/answerButton1"
-
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintLeft_toRightOf="@+id/guideline2"
         />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline1"
+        app:layout_constraintGuide_begin="-23dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="-23dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"/>
+
 
 
 </android.support.constraint.ConstraintLayout>
