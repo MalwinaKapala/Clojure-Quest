@@ -102,7 +102,7 @@
         android:id="@+id/answerButton"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:text="ANSWEAR"
+        android:text="ANSWER"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         app:layout_constraintRight_toLeftOf="@+id/guideline1"
@@ -132,7 +132,16 @@
         app:layout_constraintGuide_begin="-23dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.55"/>
-
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerTextView"
+        android:text="bhdsbciuwriwnjijhuyfytf hugyuvhybnhiugyf jhyvgchgchgchg "
+        android:textSize="16sp"
+        android:background="@color/lightGray"
+        app:layout_constraintTop_toBottomOf="@id/answerButton"
+        app:layout_constraintLeft_toLeftOf="@id/answerButton"
+        android:layout_marginTop="10dp"
+        />
 
 </android.support.constraint.ConstraintLayout>
