@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button answerButton;
     Button nextButton;
+    TextView answerTextView;
     float aNumber;
     int anotherNumber;
 
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // do not let user hit buttons more than once (either case)
                 nextButton.setEnabled(true);
                 answerButton.setEnabled(false);
+                answerTextView = (TextView) findViewById(R.id.answerTextView);
+                answerTextView.setVisibility(View.VISIBLE);
                 break;
             case R.id.nextButton:
 //                currentNum = alterNum();
