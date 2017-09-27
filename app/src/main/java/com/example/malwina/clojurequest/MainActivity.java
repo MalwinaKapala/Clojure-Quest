@@ -14,37 +14,49 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button answerButton;
+    Button nextButton;
+    float aNumber;
+    int anotherNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         answerButton = (Button)findViewById(R.id.answerButton);
-
         answerButton.setOnClickListener(this);
+        nextButton = (Button)findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(this);
+
+        nextButton.setEnabled(false);
+
+        aNumber = 5.5f;
+        anotherNumber = 5;
+        aNumber = anotherNumber;
+        anotherNumber = (int)aNumber;
     }
 
 
     public void onClick(View v) {
-        Log.d("Malwina", "clicked");
-//        switch (v.getId()) {
-//            case R.id.num_confirmation:
-//                //do nothing
-//                // do not let user hit buttons more than once (either case)
-//                nextButton.setEnabled(false);
-//                answerButton.setEnabled(false);
-//                break;
-//            case R.id.swap_button:
+//        Log.d("Malwina", "clicked");
+
+        switch (v.getId()) {
+            case R.id.answerButton:
+                //do nothing
+                // do not let user hit buttons more than once (either case)
+                nextButton.setEnabled(true);
+                answerButton.setEnabled(false);
+                break;
+            case R.id.nextButton:
 //                currentNum = alterNum();
 //                myTextView.setText("Current Number: " + String.valueOf(currentNum));
 //                // do not let user hit buttons more than once (either case)
-//                nextButton.setEnabled(false);
-//                answerButton.setEnabled(false);
-//                break;
-//            default:
-//                break;
-////        }
-//    }
+                nextButton.setEnabled(false);
+                answerButton.setEnabled(false);
+                break;
+            default:
+                break;
+//        }
+    }
     }
     public void onRadioButtonClicked (View view) {
         RadioButton rb1 = (RadioButton) findViewById(R.id.radio_button_1);
