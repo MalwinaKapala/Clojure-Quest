@@ -1,5 +1,6 @@
 package com.example.malwina.clojurequest;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                // do not let user hit buttons more than once (either case)
                 nextButton.setEnabled(false);
                 answerButton.setEnabled(false);
+                Intent intent2 = new Intent(this, MainActivity2.class);
+                startActivity(intent2);
                 break;
             default:
                 break;
